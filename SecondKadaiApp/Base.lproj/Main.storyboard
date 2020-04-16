@@ -21,9 +21,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="入力場所" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uPH-Qt-Wyv">
-                                <rect key="frame" x="164.5" y="265" width="85.5" height="34"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(氏名を入力)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uPH-Qt-Wyv">
+                                <rect key="frame" x="100" y="265" width="214" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -39,17 +39,22 @@
                         <constraints>
                             <constraint firstItem="btD-qp-pJc" firstAttribute="top" secondItem="uPH-Qt-Wyv" secondAttribute="bottom" constant="100" id="4DN-NX-9lR"/>
                             <constraint firstItem="btD-qp-pJc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Xg-PZ-5wp"/>
+                            <constraint firstItem="uPH-Qt-Wyv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="OcQ-Qn-Vse"/>
                             <constraint firstItem="VPJ-93-C9A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="RVA-p9-kFE"/>
                             <constraint firstItem="uPH-Qt-Wyv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TvH-Gg-HkZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uPH-Qt-Wyv" secondAttribute="trailing" constant="100" id="gfx-XZ-GqR"/>
                             <constraint firstItem="uPH-Qt-Wyv" firstAttribute="top" secondItem="VPJ-93-C9A" secondAttribute="bottom" constant="100" id="n3h-OV-nzl"/>
                             <constraint firstItem="VPJ-93-C9A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zWu-ea-wyH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="uPH-Qt-Wyv" id="jir-Gj-SUr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="102"/>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="oME-1b-mEO">
@@ -59,16 +64,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH3-lg-x6E">
-                                <rect key="frame" x="186" y="196" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未入力" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH3-lg-x6E">
+                                <rect key="frame" x="100" y="100" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHK-ie-v3S">
-                                <rect key="frame" x="194" y="318" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHK-ie-v3S">
+                                <rect key="frame" x="190" y="221" width="34" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="fF8-4f-DMw" kind="unwind" unwindAction="unwindWithSegue:" id="l5q-hw-IEH"/>
@@ -76,6 +79,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FH3-lg-x6E" firstAttribute="top" secondItem="ucB-AR-FV0" secondAttribute="top" constant="100" id="8As-RI-EVJ"/>
+                            <constraint firstItem="bHK-ie-v3S" firstAttribute="centerX" secondItem="Ip6-8T-o9J" secondAttribute="centerX" id="9UI-8R-Umy"/>
+                            <constraint firstItem="bHK-ie-v3S" firstAttribute="top" secondItem="FH3-lg-x6E" secondAttribute="bottom" constant="100" id="Krb-HF-2fq"/>
+                            <constraint firstItem="ucB-AR-FV0" firstAttribute="trailing" secondItem="FH3-lg-x6E" secondAttribute="trailing" constant="100" id="NnN-b9-4AT"/>
+                            <constraint firstItem="FH3-lg-x6E" firstAttribute="leading" secondItem="ucB-AR-FV0" secondAttribute="leading" constant="100" id="dZd-zM-JHJ"/>
+                            <constraint firstItem="FH3-lg-x6E" firstAttribute="centerX" secondItem="Ip6-8T-o9J" secondAttribute="centerX" id="ehJ-2g-fw6"/>
+                            <constraint firstItem="ucB-AR-FV0" firstAttribute="trailing" secondItem="bHK-ie-v3S" secondAttribute="trailing" constant="190" id="iv4-xs-fr3"/>
+                            <constraint firstItem="bHK-ie-v3S" firstAttribute="leading" secondItem="ucB-AR-FV0" secondAttribute="leading" constant="190" id="wWG-rM-bYp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ucB-AR-FV0"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bvy-Mk-URS"/>

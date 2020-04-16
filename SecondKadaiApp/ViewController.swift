@@ -10,17 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var textField: UITextField!
+    
     @IBAction func unwind(segue: UIStoryboardSegue){
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // if textField.text == nil {
+        //textField.borderStyle =
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
-        resultViewController.x = 1
-        resultViewController.y = 2
+          resultViewController.x = textField.text
+//        resultViewController.x = 1
+//        resultViewController.y = 2
     }
 
 }

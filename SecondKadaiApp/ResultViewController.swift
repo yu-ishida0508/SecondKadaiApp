@@ -9,17 +9,22 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-    @IBOutlet weak var label: UILabel!
     
-    var x : Int = 0
-    var y : Int = 0
+    @IBOutlet weak var label: UILabel!
+    var x : String?
+   // var x : Int = 0
+   // var y : Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let result = x + y
-        label.text = "結果は、\(result)です"
+        //　　　　　　　if label.text == nil{
+        //    label.text = "未入力です、戻って入力して下さい"
+        //}
+        label.text = "こんにちは、\(x!)さん"
+        //      let result = x + y
+  //      label.text = "結果は、\(result)です"
         
     }
     
