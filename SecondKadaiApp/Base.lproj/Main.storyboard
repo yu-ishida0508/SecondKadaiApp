@@ -29,7 +29,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btD-qp-pJc">
                                 <rect key="frame" x="184" y="399" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="ボタン"/>
                                 <connections>
                                     <segue destination="CXN-wd-7Tf" kind="show" id="6Y6-lP-Nn1"/>
                                 </connections>
